@@ -1,37 +1,31 @@
 .container{
     border: 2px solid black;
-    margin-top:15%;
-    margin-left:20%;
-    text-align: center;
+    margin: auto;
     background: url("/Users/brittany/Desktop/city background.png");
     background-position: 0px 0px;
-    background-size: contain;
-    background-repeat: repeat-x;
-    /* background: url("/Users/brittany/Desktop/city background.png"); */
+    background-size: cover;
     height: 500px;
-    width: 800px;
-    
-    
-    
+    width: 800px;    
 }
-
-.city {
+/* .city {
     animation: animaontainer 120s liner infinite
 }
+
 @keyframes animar_city { 
     from{background-position: 0 0;
     }
-    to{ background-position: 100% ;}
-}
+    to{ background-position: 100% 0;}
+} */
 
-  
+
+/* dog running */
 .dog {
     position: relative;
-    top: 40%;
+    top: 250px;
     height: 200px;
     width: calc(1745px / 4);
     background: url(/Users/brittany/Downloads/sprite-thepix-animation-walk-cycle-dog-running-sheet-c435781797adf88c596fed47c7d36449.png);
-
+    /* animation: jump 1s; */
     animation: animateDog 1s steps(4) infinite;
 
 }
@@ -45,14 +39,31 @@
   }
 }
 
+
 .rock{
-    
-    left: 50%;
-    height: 80px;
-    width: 80px;
-    display: inline-block;
-    background-image: url("");
+    height: 150px;
+    width: 150px;
+    position: relative;
+    top: 150px;
+    background-image: url("https://static.vecteezy.com/system/resources/previews/026/547/570/non_2x/an-8-bit-retro-styled-pixel-art-illustration-of-a-dark-stone-rock-formation-free-png.png");
     background-size: cover;
+    animation: rock 1.5s infinite;
+}
+
+@keyframes rock{
+  0%{left: 650px}
+  100%{left: -150px}
+}
+
+.jump-animation{
+  animation: jump 1s;
+}
+@keyframes jump {
+  0%{top: 200px;}
+  50%{top: 150px;}
+  75%{top: 150px;}
+  100%{top: 200px;}
+  
 }
 
 .score{
