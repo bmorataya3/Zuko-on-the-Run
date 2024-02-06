@@ -3,69 +3,59 @@
     margin-top:15%;
     margin-left:20%;
     text-align: center;
-    /* background: url("/Users/brittany/Desktop/city background.png"); */
+    background: url("/Users/brittany/Desktop/city background.png");
     background-position: 0px 0px;
+    background-size: contain;
     background-repeat: repeat-x;
-    position: absolute;
-    height: 350px;
+    /* background: url("/Users/brittany/Desktop/city background.png"); */
+    height: 500px;
     width: 800px;
     
+    
+    
 }
+
 .city {
-  background: url("/Users/brittany/Desktop/city background.png");
-  background-position: 0px 0px;
-    background-repeat: repeat-x;
-    position: absolute;
-    height: 350px;
-    width: 800px;
-    animation: animar_container 120s liner infinite
+    animation: animaontainer 120s liner infinite
 }
 @keyframes animar_city { 
     from{background-position: 0 0;
     }
-    to{ background-position: 100% 0;}
+    to{ background-position: 100% ;}
 }
 
-@mixin animation($anim) {
-    -o-animation: $anim;
-    -ms-animation: $anim;
-    -moz-animation: $anim;
-    -webkit-animation: $anim;
-    animation: $anim;
-}
-
-    
-
-  
-  @mixin keyframes($animationName) {
-    @-webkit-keyframes #{$animationName} {
-      @content;
-    }
-    @-moz-keyframes #{$animationName}  {
-      @content;
-    }
-    @-o-keyframes #{$animationName} {
-      @content;
-    }
-    @keyframes #{$animationName} {
-      @content;
-    }
-  }
   
 .dog {
-    width: 373px;
-    height: 177px;
-    background-size: 2238px 177px;
-    background-repeat: no-repeat;
-    background-image: 
-      @include animation(run 1s steps(6) infinite);
+    position: relative;
+    top: 40%;
+    height: 200px;
+    width: calc(1745px / 4);
+    background: url(/Users/brittany/Downloads/sprite-thepix-animation-walk-cycle-dog-running-sheet-c435781797adf88c596fed47c7d36449.png);
+
+    animation: animateDog 1s steps(4) infinite;
+
+}
+
+@keyframes animateDog{
+  from{
+    background-position: 0 ;
   }
-  
-  @include keyframes(run) {
-    0% {
-      background-position: 0px 0px;
-    }
-    100% {
-      background-position: -2238px 0px;
-    }
+  to{
+    background-position: 1745px;
   }
+}
+
+.rock{
+    
+    left: 50%;
+    height: 80px;
+    width: 80px;
+    display: inline-block;
+    background-image: url("");
+    background-size: cover;
+}
+
+.score{
+  text-align: center;
+
+}
